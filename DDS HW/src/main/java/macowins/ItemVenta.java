@@ -2,7 +2,7 @@ package macowins;
 
 public class ItemVenta {
 	private Prenda prenda;
-	private int cantidad;
+	private Integer cantidad;
 	
 		
 	public Prenda getPrenda() {
