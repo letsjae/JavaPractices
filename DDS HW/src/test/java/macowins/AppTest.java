@@ -1,4 +1,4 @@
-package DDS;
+package macowins;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
