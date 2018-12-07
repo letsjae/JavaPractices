@@ -1,0 +1,74 @@
+@SpringBootConfiguration (MARCA A LA CLASE COMO UNA CLASE DE CONFIGURACION)
+@EnableAutoConfiguration (CONFIGURACION AUTOMATICA PARA CADA UNO DE LOS COMPONENTES QUE TENGAMOS EN EL POM)
+@ComponentScan (ENCONTRAR TODAS LAS CLASES QUE ESTAN ANOTADAS DENTRO DEL PACKAGE PRINCIPAL)
+
+
+ los sistemas embebidos se diseñan para cubrir necesidades específicas
+
+ El servlet es una clase en el lenguaje de programación Java, utilizada para ampliar las capacidades de un servidor. Aunque los servlets pueden responder a cualquier tipo de solicitudes, estos son utilizados comúnmente para extender las aplicaciones alojadas por servidores web, de tal manera que pueden ser vistos como applets de Java que se ejecutan en servidores en vez de navegadores web. Este tipo de servlets son la contraparte Java de otras tecnologías de contenido dinámico Web, como PHP y ASP.NET. 
+
+ SERVLET: programa JAVA que se ejecuta en un servidor web 
+ se usan los servlet para crear aplicaciones web.
+ el servlet recibe una petición del cliente y realiza su tarea,
+ TAREAS: 
+ 	- Generar una rta HTML
+ 	- Llamar a otros SERVLETS
+ 	- Utilizar cookies y sesiones
+ 	- Enlace (controlador) entre el cliente y BBDD
+
+
+SERVLET = página JSP
+
+qué diferencia existe entonces?
+
+JSP: código HTML + código JAVA
+SERVLET: programa exclusivamente con código JAVA, no hay HTML.
+cuando recibe una petición puede generar código HTML.
+
+Esquema de funcionamiento:
+
+usuario navegando
+servidor remoto que tiene almacenado un servlet
+
+el usuario realiza un request al servidor, esa petición es recogida por el servlet
+para responderla, genera un archivo HTML, se encarga de fabricar en ese momento un docimento HTML
+Ahí se genera una respuesta al request y ese archivo HTML viaja al navegador del cliente.
+
+por qué existen éstas dos formas entonces?
+
+JSP - SERVLET
+
+JSP: cuando la logica a programar sea poca, cuando el código java sean pocas líneas de código
+SERVLET: código complejo
+
+Pueden trabajar de forma conjunta, casi siempre lo hacen
+
+podemos tener dentro de un mismo server un JSP y un SERVLET trabajando conjuntamente
+
+CREACION
+
+1 - Crear una clase que herede de HttpServlet
+	- tiene entre otros métodos el doGet(request, response) emcargado de recibir la petición
+	spbre escrobir el método para decirle cómo hacer la petición
+2 - Establecer el formato de la rta
+3 - Generar el contenido de la rta
+
+SERVLET - Interfaz
+HttpServlet - Clase
+doGet(HttpServletRequest, HttpServletResponse) Método
+
+(HttpServletRequest, HttpServletResponse) son interfaces
+
+ServletResponse - método getWriter()
+HttpServletResponse
+
+Apache tomcat - Jakarta Tomcat permite ejecutar seervlets y paginas dinámicas (JSP)
+es un servidor web (encargado de suministrar información a una serie de clientes)
+
+kill $(ps -aef | grep java | grep apache | awk '{print $2}')
+
+
+
+
+
+
